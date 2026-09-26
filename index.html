@@ -19,12 +19,17 @@
 </head>
 <body>
 <h1>Skymaps privacy policy</h1>
-<p>Last updated 19 September 2026.</p>
-<p>Skymaps is a weather, maps, flights and stargazing app. This policy describes what it does with your information. It is written from the code rather than from a template: every claim below is something the app can be checked against, and the list of services is every hostname the app contacts.</p>
-
+<p>Last updated 25 September 2026.</p>
+<p>Skymaps is a weather, maps, flights and stargazing app. This policy describes what it does with
+your information. It is written from the code rather than from a template: every claim below is
+something the app can be checked against, and the list of services is every hostname the app
+contacts.</p>
 <h2>The short version</h2>
-<p>Skymaps has no account, no analytics, no advertising and no tracking. Nothing you do in the app is recorded anywhere that anyone can look at later. There is no server holding a profile of you, because there is no profile.</p>
-
+<p>Skymaps has no account, no advertising and no tracking, and it does not watch how you use the
+app. Nothing you do in the app is recorded anywhere that anyone can look at later, with one
+exception you choose: if you pick a feature on the What's Next screen and send it, that single
+choice is kept (see below). There is no server holding a profile of you, because there is no
+profile.</p>
 <h2>What stays on your device</h2>
 <p>All of it, apart from the requests described in the next section. Specifically:</p>
 <ul>
@@ -33,36 +38,82 @@
 <li>The flights you follow and their last known details.</li>
 <li>Your observing log.</li>
 </ul>
-<p>These live in the app&#x27;s own storage on the phone and are removed when you delete the app. They are not backed up to any server operated by this app. If you use iCloud device backup, Apple backs them up along with everything else on the phone, under Apple&#x27;s terms rather than ours.</p>
-
+<p>These live in the app's own storage on the phone and are removed when you delete the app. They
+are not backed up to any server operated by this app. If you use iCloud device backup, Apple
+backs them up along with everything else on the phone, under Apple's terms rather than ours.</p>
+<p><strong>Shortening the forecaster's notes happens here too.</strong> The Why screen can turn the National
+Weather Service's technical discussion into two or three plain sentences. That runs on Apple's
+on-device model, on your phone, using text the app had already downloaded to show you. Nothing
+is sent to us, to Apple, or to anyone else for it, and it works with the phone offline. The
+result is kept on the phone until the forecast office issues a new discussion. On a device
+without Apple Intelligence the control is simply not there and the full text is shown as it
+always was.</p>
 <h2>What leaves your device, and why</h2>
-<p><strong>Your location, when you allow it.</strong> Sent to weather and map services so they can answer &quot;what is the weather here&quot;. It is sent as a coordinate with each request and is not stored by this app alongside anything identifying you. You can decline location access and use the app by searching for places instead; the app is built to work that way.</p>
+<p><strong>Your location, when you allow it.</strong> Sent to weather and map services so they can answer "what
+is the weather here". It is sent as a coordinate with each request and is not stored by this app
+alongside anything identifying you. You can decline location access and use the app by searching
+for places instead; the app is built to work that way.</p>
 <p><strong>A place name or coordinate you search for.</strong> Sent to Apple Maps for search and directions.</p>
-<p><strong>A flight number, callsign or tail number you look up or follow.</strong> Sent to the services listed below.</p>
-<p>Nothing else is transmitted. No identifier for you, your device or your install is attached to any of these requests, with one exception: requests to the Skymaps flights server carry that install&#x27;s access key, described in its own section below.</p>
-
+<p><strong>A flight number, callsign or tail number you look up or follow.</strong> Sent to the services listed
+below.</p>
+<p><strong>Your choice of what to build next, only if you send it.</strong> Settings, What's Next
+lists features that could be built next, and you can pick one. Your choice is sent to the Skymaps
+flights server when you tap Submit, and not before, with a random install number the app makes
+for this purpose, and is stored with that number or the install's access key. Nothing else is
+sent: there is no text box, and no name, email or account is attached. The choice is read only by
+the developer, as a count per feature, to decide what to build next, and is never shared or sold.
+Picking again and tapping Update Choice replaces your earlier choice. If the server cannot be
+reached, the choice waits on your device and is sent the next time it can be. To have a choice
+removed from the server, write to the address at the end of this page.</p>
+<p>Nothing else is transmitted, and with one exception no identifier for you, your device or your
+install is attached to any of these requests. The exception is the Skymaps flights server: requests
+to it carry the install's access key, described below.</p>
 <h2>The services Skymaps contacts</h2>
-<p>Weather, alerts and forecasts: <code>api.weather.gov</code> (US National Weather Service), Apple WeatherKit, <code>open-meteo.com</code> and its air quality, archive and ensemble endpoints, <code>www.spc.noaa.gov</code> (Storm Prediction Center), <code>mesonet.agron.iastate.edu</code> and <code>api.rainviewer.com</code> (radar), <code>services.swpc.noaa.gov</code> (space weather), <code>aviationweather.gov</code> (airport weather).</p>
-<p>Hazards: <code>earthquake.usgs.gov</code>, <code>volcanoes.usgs.gov</code>, <code>services3.arcgis.com</code> (wildfire), <code>nasstatus.faa.gov</code> (airport delays).</p>
-<p>Flights: <code>opendata.adsb.fi</code> and <code>api.adsb.lol</code> (aircraft positions, broadcast by the aircraft themselves), <code>api.adsbdb.com</code> (routes and airframes), <code>opensky-network.org</code>, and <code>flights.protes.fyi</code>, which is this app&#x27;s own small server, described below.</p>
+<p>Weather, alerts and forecasts: <code>api.weather.gov</code> (US National Weather Service), Apple WeatherKit,
+<code>open-meteo.com</code> and its air quality, archive and ensemble endpoints, <code>www.spc.noaa.gov</code> (Storm
+Prediction Center), <code>mesonet.agron.iastate.edu</code> and <code>api.rainviewer.com</code> (radar),
+<code>services.swpc.noaa.gov</code> (space weather), <code>aviationweather.gov</code> (airport weather).</p>
+<p>Hazards: <code>earthquake.usgs.gov</code>, <code>volcanoes.usgs.gov</code>, <code>services3.arcgis.com</code> (wildfire),
+<code>nasstatus.faa.gov</code> (airport delays).</p>
+<p>Flights: <code>opendata.adsb.fi</code> and <code>api.adsb.lol</code> (aircraft positions, broadcast by the aircraft
+themselves), <code>api.adsbdb.com</code> (routes and airframes), <code>opensky-network.org</code>, and
+<code>flights.protes.fyi</code>, which is this app's own small server, described below.</p>
 <p>Sky: <code>celestrak.org</code> (satellite orbital elements).</p>
-<p>Maps and directions: Apple Maps. Tapping a ride option opens <code>m.uber.com</code> or <code>ride.lyft.com</code> in your browser, at which point their policies apply.</p>
-<p>Each of these has its own privacy policy and receives only what a request needs, which for almost all of them is a coordinate or an identifier you typed.</p>
-
+<p>Maps and directions: Apple Maps. Tapping a ride option opens <code>m.uber.com</code> or <code>ride.lyft.com</code> in
+your browser, at which point their policies apply.</p>
+<p>Each of these has its own privacy policy and receives only what a request needs, which for
+almost all of them is a coordinate or an identifier you typed.</p>
 <h2>The Skymaps flights server</h2>
-<p>Following a flight, and looking one up, goes through a small server operated by the developer at <code>flights.protes.fyi</code>. It exists for one reason: the flight schedule provider charges per request, so the server makes those requests and enforces a monthly ceiling, rather than the app doing it.</p>
-<p>Each install of the app is given a randomly generated access key. The key is not derived from you, your phone or any Apple identifier, and the server holds nothing that connects it to a person beyond a short label the developer types when issuing it (for example, &quot;test phone 2&quot;). The server stores: the flight numbers being followed and which key asked for each; the schedule and position data returned for those flights; a count of look-ups made per key per day, kept for seven days; and a count of requests made to the schedule provider each month. It does not store your location and does not keep a log of IP addresses beyond ordinary connection handling. Traffic to this server passes through Cloudflare, which operates the connection and handles addresses under <a href="https://www.cloudflare.com/privacypolicy/">its own privacy policy</a>. The server&#x27;s database is backed up nightly to storage the developer controls, and backups are kept for fourteen days.</p>
-<p>If push notifications are ever enabled, the server would additionally hold an Apple-issued push token for the device. At the time of writing that feature is not enabled in the app.</p>
-
+<p>Following a flight, and looking one up, goes through a small server operated by the developer at
+<code>flights.protes.fyi</code>. It exists for one reason: the flight schedule provider charges per request,
+so the server makes those requests and enforces a monthly ceiling, rather than the app doing it.</p>
+<p>Each install is given a randomly generated access key. On phones that support Apple's App Attest,
+the app first proves to the server that it is a genuine copy of Skymaps, and the server then issues
+that install its own key. Keys are generated on the server and are not derived from you, your phone,
+or any Apple identifier. App Attest tells the server only that the app is genuine, never who is
+using it.</p>
+<p><strong>What it stores:</strong> the flight numbers being followed and which key asked for each one; the
+schedule and position data returned for them; a count of look-ups per key per day, kept for seven
+days; and a count of requests made to the schedule provider each month.</p>
+<p><strong>Your What's Next choice, if you sent one.</strong> One feature per install, stored against that
+install's key or the random install number described above, and replaced if you choose again.
+There is no free text: nothing you type is sent or stored. Only the developer can see the choices,
+and only as a count per feature. To have yours removed, write to the address at the end of this
+page.</p>
+<p><strong>What it does not store:</strong> your location. There is no log of your IP address beyond ordinary
+connection handling. Traffic reaches the server through Cloudflare, which handles addresses under
+its own policy. The database is backed up nightly to storage the developer controls and those
+backups are kept for fourteen days.</p>
+<p>If push notifications are ever enabled, the server would additionally hold an Apple-issued push
+token for the device. At the time of writing that feature is not enabled in the app.</p>
 <h2>Notifications</h2>
-<p>Weather alerts, flight changes, sky events and the morning digest are scheduled and delivered by your own device. Working out when to send them happens on the phone.</p>
-
+<p>Weather alerts, flight changes, sky events and the morning digest are scheduled and delivered by
+your own device. Working out when to send them happens on the phone.</p>
 <h2>Children</h2>
 <p>Skymaps is not directed at children and collects nothing that could identify anyone, of any age.</p>
-
 <h2>Changes</h2>
-<p>If this policy changes, the date at the top changes with it, and any change that affects what leaves your device will be called out in the app&#x27;s What&#x27;s New screen.</p>
-
+<p>If this policy changes, the date at the top changes with it, and any change that affects what
+leaves your device will be called out in the app's What's New screen.</p>
 <h2>Contact</h2>
 <p>replyprasanth@gmail.com</p>
 </body>
