@@ -104,13 +104,14 @@ the choices, and only as a count per feature. Remove My Choices on the What's Ne
 all of yours, and they leave the nightly backups within fourteen days.</p>
 <p><strong>What it does not store:</strong> your location. There is no log of your IP address beyond ordinary
 connection handling. Traffic reaches the server through Cloudflare, which handles addresses under
-its own policy. The database is backed up nightly to storage the developer controls and those
-backups are kept for fourteen days.</p>
-<p>If push notifications are ever enabled, the server would additionally hold an Apple-issued push
-token for the device. At the time of writing that feature is not enabled in the app.</p>
+its own policy.</p>
+<p><strong>Backups.</strong> The server's database is copied every night to private storage that only the
+developer can access. Each copy is deleted after fourteen days, so anything removed from the
+server is gone from every copy within fourteen days.</p>
 <h2>Notifications</h2>
 <p>Weather alerts, flight changes, sky events and the morning digest are scheduled and delivered by
-your own device. Working out when to send them happens on the phone.</p>
+your own device. Working out when to send them happens on the phone. The server never sends
+notifications to your phone and holds no push token for it.</p>
 <h2>Children</h2>
 <p>Skymaps is not directed at children and collects nothing that could identify anyone, of any age.</p>
 <h2>Changes</h2>
