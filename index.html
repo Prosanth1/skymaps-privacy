@@ -25,11 +25,12 @@ your information. It is written from the code rather than from a template: every
 something the app can be checked against, and the list of services is every hostname the app
 contacts.</p>
 <h2>The short version</h2>
-<p>Skymaps has no account, no advertising and no tracking, and it does not watch how you use the
-app. Nothing you do in the app is recorded anywhere that anyone can look at later, with two
-exceptions, both described below: if you pick features on the What's Next screen and send them,
-those choices, up to three, are kept; and if you play Think of a Place with Help Atlas Learn on,
-the games Atlas gets wrong are shared so it can learn from them. There is no server holding a
+<p>Skymaps has no account, no advertising and no tracking, and it does not watch how you use the app.
+Nothing you do in the app is recorded anywhere that anyone can look at later, with two exceptions,
+both described below: if you pick features on the What's Next screen and send them, those choices,
+up to three, are kept; and if you play Think of a Place and choose to share, the games Atlas gets
+wrong are shared so it can learn from them. Both are kept against a random access key for your
+install, described below, never against your name, email or an account. There is no server holding a
 profile of you, because there is no profile.</p>
 <h2>What stays on your device</h2>
 <p>All of it, apart from the requests described in the next section. Specifically:</p>
@@ -61,8 +62,8 @@ for places instead; the app is built to work that way.</p>
 below.</p>
 <p><strong>Your choices of what to improve next, only if you send them.</strong> Settings, What's Next lists
 improvements to what the app already does, and you can pick up to three. Your choices are sent to
-the Skymaps flights server when you tap Submit, and not before, with a random install number the
-app makes for this purpose, and are stored with that number or the install's access key. Nothing
+the Skymaps flights server when you tap Submit, and not before, with the install's access key and a
+random install number the app makes for this purpose, and are stored against that key. Nothing
 else is sent: there is no text box, and no name, email or account is attached. The choices are read
 only by the developer, as a count per feature, to decide what to improve next, and are never shared
 or sold. Changing your picks and tapping Update Choices replaces your earlier choices. If the
@@ -77,21 +78,26 @@ was, that game is sent to the Skymaps flights server so Atlas can learn from it,
 everyone who plays. What is sent: the place (one of the cities Atlas already knows, or for a place
 it did not know, its name as Apple Maps gives it, its country, and its position rounded to about 11
 km), the answers you gave as question and answer, whether Atlas won, and how many guesses it used,
-with a random install number the app makes for this game alone or the install's access key. What is
-never sent: your location, your name or anything else about who you are, details of your phone, or
-anything you type. A place name with numbers in it, like a street address, is never sent. The
-switch is on the "Which Place Was It?" screen, under the words "Your answers and the place, never
-your location or who you are"; it is on unless you turn it off, and turning it off stops sending at
-once, including any game still waiting to go. If the server cannot be reached, games wait on your
-device for up to thirty days and are sent later; nothing about this is ever shown or asked in the
-game. Once a day at most, the app also downloads what everybody's games add up to, which carries
-nothing about you. Forget What Atlas Learned, in Settings, Experimental, deletes everything tied to
-your install. The anonymous counts your games already added to, which say nothing about who sent
-them, stay so Atlas keeps what it learned. The server deletes the rest straight away, the app keeps
-asking until it has, and copies in the nightly backups are gone within fourteen days.</p>
+with the install's access key and a random install number the app makes for this game alone, and
+stored against the key, so your games count as one player and can all be deleted when you ask. What
+is never sent: your location, your name or anything else about who you are, details of your phone,
+or anything you type. A place name with numbers in it, like a street address, is never sent.</p>
+<p>The first time a game would be shared, before anything is sent, a sheet says what is shared, what
+never is, and how to delete it, with two buttons: Share to Help Atlas and Don't Share. Nothing is
+sent until you tap one, and your choice sets the Help Atlas Learn switch. The sheet is shown once.
+The switch is on the "Which Place Was It?" screen, under the words "Your answers and the place,
+never your location or who you are"; turning it off stops sending at once, including any game still
+waiting to go. If the server cannot be reached, games wait on your device, in the app's own storage,
+for up to thirty days and are sent later without interrupting the game. Once a day at most, the app
+also downloads what everybody's games add up to, which carries nothing about you. Forget What Atlas
+Learned, in Settings, Experimental, deletes everything tied to your install. The counts your games
+are added to when you forget, which say nothing about who sent them, stay so Atlas keeps what it
+learned. The server deletes the rest straight away, the app keeps asking until it has, and copies in
+the nightly backups are gone within fourteen days.</p>
 <p>Nothing else is transmitted, and with one exception no identifier for you, your device or your
 install is attached to any of these requests. The exception is the Skymaps flights server: requests
-to it carry the install's access key, described below.</p>
+to it carry the install's access key, and those from What's Next and Think of a Place also carry a
+random install number, both described below.</p>
 <h2>The services Skymaps contacts</h2>
 <p>Weather, alerts and forecasts: <code>api.weather.gov</code> (US National Weather Service), Apple WeatherKit,
 <code>open-meteo.com</code> and its air quality, archive and ensemble endpoints, <code>www.spc.noaa.gov</code> (Storm
@@ -111,19 +117,26 @@ almost all of them is a coordinate or an identifier you typed.</p>
 <p>Following a flight, and looking one up, goes through a small server operated by the developer at
 <code>flights.protes.fyi</code>. It exists for one reason: the flight schedule provider charges per request,
 so the server makes those requests and enforces a monthly ceiling, rather than the app doing it.</p>
-<p>Each install is given a randomly generated access key. On phones that support Apple's App Attest,
-the app first proves to the server that it is a genuine copy of Skymaps, and the server then issues
-that install its own key. Keys are generated on the server and are not derived from you, your phone,
-or any Apple identifier. App Attest tells the server only that the app is genuine, never who is
-using it.</p>
-<p><strong>What it stores:</strong> the flight numbers being followed and which key asked for each one; the
-schedule and position data returned for them; a count of look-ups per key per day, kept for seven
-days; and a count of requests made to the schedule provider each month.</p>
+<p>Each install that uses the server has its own randomly generated access key. To get one, the app
+first proves to the server, with Apple's App Attest, that it is a genuine copy of Skymaps, and the
+server then issues that install its own key. A device that cannot use App Attest does not use the
+server at all, and the app says so where flight schedules would appear. Keys are generated on the
+server and are not derived from you, your phone, or any Apple identifier. App Attest tells the
+server only that the app is genuine, never who is using it. The server also notes which key each
+random install number belongs to, so What's Next choices or Think of a Place games an install sent
+with that number before it had a key count once; that note is deleted along with them.</p>
+<p><strong>What it stores:</strong> for each install, the public half of its App Attest key, Apple's attestation
+receipt and a fingerprint of its access key, so later requests can be checked; for a flight you look
+up, the answer, filed under the flight number alone and not under your key, for up to about an hour
+so the next person asking does not cost another request; a count of look-ups per key per day, kept
+for seven days; and a count of requests made to the schedule provider each month. The flights you
+follow are followed on your phone, which looks them up the same way; the server keeps no list of
+them.</p>
 <p><strong>Your What's Next choices, if you sent them.</strong> Up to three features per install, stored against
-that install's key or the random install number described above, and replaced together if you
-choose again. There is no free text: nothing you type is sent or stored. Only the developer can see
-the choices, and only as a count per feature. Remove My Choices on the What's Next screen deletes
-all of yours straight away. Copies in the nightly backups are gone within fourteen days.</p>
+that install's key, and replaced together if you choose again. There is no free text: nothing you
+type is sent or stored. Only the developer can see the choices, and only as a count per feature.
+Remove My Choices on the What's Next screen deletes all of yours straight away. Copies in the
+nightly backups are gone within fourteen days.</p>
 <p><strong>Your Think of a Place answers, if Help Atlas Learn was on.</strong> The server does not keep games as
 games. Each one is folded into a table of answers: for each place and question, the latest answer
 from each install, so one install is one voice however often it plays the same place, and only for
@@ -138,10 +151,13 @@ and places players taught, once at least three installs taught the same one with
 under the name most of them used. No install number, key or individual answer is ever in it. The
 developer sees the same totals, plus which installs were left out and why, and can keep a taught
 name out of the totals. Answers tied to an install are kept until you delete them, or until the
-game is retired.</p>
+game is retired. They are linked to your install's access key, which is how one install stays one
+voice and how Forget What Atlas Learned finds them; that is the same key your What's Next choices
+are kept against. Nothing links either to
+your name, email, phone number or an account, and none of it is shared with or sold to anyone.</p>
 <p><strong>When you tap Forget What Atlas Learned.</strong> Forget What Atlas Learned deletes everything tied to
 your install: its answers, the places it taught, its game counts and its daily counters. The
-anonymous counts your games already added to, which say nothing about who sent them, stay so Atlas
+counts your games are added to when you forget, which say nothing about who sent them, stay so Atlas
 keeps what it learned. Just before the delete, the server adds your latest answer for each place
 and question to a plain count of how many players gave each answer, and each place you taught to
 a count of how many players taught that name in that country at that rounded position. These
