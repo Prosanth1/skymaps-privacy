@@ -19,17 +19,18 @@
 </head>
 <body>
 <h1>Skymaps privacy policy</h1>
-<p>Last updated 27 September 2026.</p>
+<p>Last updated 4 October 2026.</p>
 <p>Skymaps is a weather, maps, flights and stargazing app. This policy describes what it does with
 your information. It is written from the code rather than from a template: every claim below is
 something the app can be checked against, and the list of services is every hostname the app
 contacts.</p>
 <h2>The short version</h2>
 <p>Skymaps has no account, no advertising and no tracking, and it does not watch how you use the
-app. Nothing you do in the app is recorded anywhere that anyone can look at later, with one
-exception you choose: if you pick features on the What's Next screen and send them, those
-choices, up to three, are kept (see below). There is no server holding a profile of you, because
-there is no profile.</p>
+app. Nothing you do in the app is recorded anywhere that anyone can look at later, with two
+exceptions, both described below: if you pick features on the What's Next screen and send them,
+those choices, up to three, are kept; and if you play Think of a Place with Help Atlas Learn on,
+the games Atlas gets wrong are shared so it can learn from them. There is no server holding a
+profile of you, because there is no profile.</p>
 <h2>What stays on your device</h2>
 <p>All of it, apart from the requests described in the next section. Specifically:</p>
 <ul>
@@ -37,6 +38,8 @@ there is no profile.</p>
 <li>Your theme, units, notification choices and every other setting.</li>
 <li>The flights you follow and their last known details.</li>
 <li>Your observing log.</li>
+<li>What Think of a Place has learned from your own games, the places you taught it, and your
+awards.</li>
 </ul>
 <p>These live in the app's own storage on the phone and are removed when you delete the app. They
 are not backed up to any server operated by this app. If you use iCloud device backup, Apple
@@ -56,17 +59,36 @@ for places instead; the app is built to work that way.</p>
 <p><strong>A place name or coordinate you search for.</strong> Sent to Apple Maps for search and directions.</p>
 <p><strong>A flight number, callsign or tail number you look up or follow.</strong> Sent to the services listed
 below.</p>
-<p><strong>Your choices of what to build next, only if you send them.</strong> Settings, What's Next
-lists features that could be built next, and you can pick up to three. Your choices are sent to
+<p><strong>Your choices of what to improve next, only if you send them.</strong> Settings, What's Next lists
+improvements to what the app already does, and you can pick up to three. Your choices are sent to
 the Skymaps flights server when you tap Submit, and not before, with a random install number the
 app makes for this purpose, and are stored with that number or the install's access key. Nothing
-else is sent: there is no text box, and no name, email or account is attached. The choices are
-read only by the developer, as a count per feature, to decide what to build next, and are never
-shared or sold. Changing your picks and tapping Update Choices replaces your earlier choices. If
-the server cannot be reached, your choices wait on your device and are sent the next time it can
-be. To remove your choices from the server, tap Remove My Choices on the same screen; the server
-deletes all of them straight away, and they are gone from the nightly backups within fourteen
-days. You can also write to the address at the end of this page.</p>
+else is sent: there is no text box, and no name, email or account is attached. The choices are read
+only by the developer, as a count per feature, to decide what to improve next, and are never shared
+or sold. Changing your picks and tapping Update Choices replaces your earlier choices. If the
+server cannot be reached, your choices wait on your device and are sent the next time it can be. To
+remove your choices from the server, tap Remove My Choices on the same screen; the server deletes
+all of them straight away. Copies in the nightly backups are gone within fourteen days. You can
+also write to the address at the end of this page.</p>
+<p><strong>Think of a Place games Atlas gets wrong, while Help Atlas Learn is on.</strong> Think of a Place, under
+Settings, Experimental, is a game where Atlas asks questions and guesses the city you have in mind;
+for now Atlas knows world cities. When Atlas does not get it right and you tell it which place it
+was, that game is sent to the Skymaps flights server so Atlas can learn from it, for you and for
+everyone who plays. What is sent: the place (one of the cities Atlas already knows, or for a place
+it did not know, its name as Apple Maps gives it, its country, and its position rounded to about 11
+km), the answers you gave as question and answer, whether Atlas won, and how many guesses it used,
+with a random install number the app makes for this game alone or the install's access key. What is
+never sent: your location, your name or anything else about who you are, details of your phone, or
+anything you type. A place name with numbers in it, like a street address, is never sent. The
+switch is on the "Which Place Was It?" screen, under the words "Your answers and the place, never
+your location or who you are"; it is on unless you turn it off, and turning it off stops sending at
+once, including any game still waiting to go. If the server cannot be reached, games wait on your
+device for up to thirty days and are sent later; nothing about this is ever shown or asked in the
+game. Once a day at most, the app also downloads what everybody's games add up to, which carries
+nothing about you. Forget What Atlas Learned, in Settings, Experimental, deletes everything tied to
+your install. The anonymous counts your games already added to, which say nothing about who sent
+them, stay so Atlas keeps what it learned. The server deletes the rest straight away, the app keeps
+asking until it has, and copies in the nightly backups are gone within fourteen days.</p>
 <p>Nothing else is transmitted, and with one exception no identifier for you, your device or your
 install is attached to any of these requests. The exception is the Skymaps flights server: requests
 to it carry the install's access key, described below.</p>
@@ -101,13 +123,38 @@ days; and a count of requests made to the schedule provider each month.</p>
 that install's key or the random install number described above, and replaced together if you
 choose again. There is no free text: nothing you type is sent or stored. Only the developer can see
 the choices, and only as a count per feature. Remove My Choices on the What's Next screen deletes
-all of yours, and they leave the nightly backups within fourteen days.</p>
+all of yours straight away. Copies in the nightly backups are gone within fourteen days.</p>
+<p><strong>Your Think of a Place answers, if Help Atlas Learn was on.</strong> The server does not keep games as
+games. Each one is folded into a table of answers: for each place and question, the latest answer
+from each install, so one install is one voice however often it plays the same place, and only for
+the 150 places it played most recently. A place you taught Atlas is kept as its name, country and
+position rounded to about 11 km, one per install per name, up to 30. Beside them, the server keeps
+a count of games won and lost per install, when it first and last sent a game, when each answer was
+last given (so the newest one counts), a count of games sent per day, kept for seven days, and
+whether an install has been left out for sending far more than a person plays or the same answer
+every time. There is no row per game, and no free text. What it shares back with every player is
+only totals: how many installs gave each answer for a place and question, once at least three have,
+and places players taught, once at least three installs taught the same one within about 25 km,
+under the name most of them used. No install number, key or individual answer is ever in it. The
+developer sees the same totals, plus which installs were left out and why, and can keep a taught
+name out of the totals. Answers tied to an install are kept until you delete them, or until the
+game is retired.</p>
+<p><strong>When you tap Forget What Atlas Learned.</strong> Forget What Atlas Learned deletes everything tied to
+your install: its answers, the places it taught, its game counts and its daily counters. The
+anonymous counts your games already added to, which say nothing about who sent them, stay so Atlas
+keeps what it learned. Just before the delete, the server adds your latest answer for each place
+and question to a plain count of how many players gave each answer, and each place you taught to
+a count of how many players taught that name in that country at that rounded position. These
+counts hold no install number, no key and no date, so nothing can tie them back to you, and they
+are shared only as part of the same totals as above. Installs left out for spam are deleted
+without adding anything. Each count has a ceiling, so deleting and playing again cannot push one
+up without limit. Copies in the nightly backups are gone within fourteen days.</p>
 <p><strong>What it does not store:</strong> your location. There is no log of your IP address beyond ordinary
 connection handling. Traffic reaches the server through Cloudflare, which handles addresses under
 its own policy.</p>
 <p><strong>Backups.</strong> The server's database is copied every night to private storage that only the
-developer can access. Each copy is deleted after fourteen days, so anything removed from the
-server is gone from every copy within fourteen days.</p>
+developer can access. Each copy is deleted after fourteen days. Anything you delete is gone from
+every copy within fourteen days.</p>
 <h2>Notifications</h2>
 <p>Weather alerts, flight changes, sky events and the morning digest are scheduled and delivered by
 your own device. Working out when to send them happens on the phone. The server never sends
