@@ -60,11 +60,12 @@ server carry the install's access key.</p>
 <li><strong>Weather and forecasts:</strong> <code>api.weather.gov</code>, Apple WeatherKit, <code>open-meteo.com</code> (including its air quality,
 archive and ensemble endpoints), <code>www.spc.noaa.gov</code>, <code>mesonet.agron.iastate.edu</code>, <code>api.rainviewer.com</code>,
 <code>services.swpc.noaa.gov</code>, <code>aviationweather.gov</code>.</li>
+<li><strong>Tides and surf:</strong> <code>api.tidesandcurrents.noaa.gov</code> and <code>www.ndbc.noaa.gov</code>. Their station lists are downloaded whole and the nearest station is found on the phone, so only a station number is sent. The wave forecast comes from <code>api.weather.gov</code> for a point a few kilometers offshore of the place shown.</li>
 <li><strong>Hazards:</strong> <code>earthquake.usgs.gov</code>, <code>volcanoes.usgs.gov</code>, <code>services3.arcgis.com</code> (wildfire), <code>nasstatus.faa.gov</code>.</li>
 <li><strong>Flights:</strong> <code>opendata.adsb.fi</code>, <code>api.adsb.lol</code>, <code>api.adsbdb.com</code>, <code>opensky-network.org</code>, and
 <code>flights.protes.fyi</code>, this app's own server.</li>
 <li><strong>Sky:</strong> <code>celestrak.org</code>.</li>
-<li><strong>Maps:</strong> Apple Maps. Ride buttons open <code>m.uber.com</code> or <code>ride.lyft.com</code> in your browser, under their policies.</li>
+<li><strong>Maps:</strong> Apple Maps, and <code>overpass-api.de</code> (OpenStreetMap) for the speed limits, stop signs and speed cameras along a drive, which receives the area around the route. Ride buttons open <code>m.uber.com</code> or <code>ride.lyft.com</code> in your browser, under their policies.</li>
 </ul>
 <p>Each receives only what its request needs: almost always a coordinate or something you typed.</p>
 <h2>The Skymaps flights server</h2>
