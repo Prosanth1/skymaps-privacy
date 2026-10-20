@@ -19,7 +19,7 @@
 </head>
 <body>
 <h1>Skymaps privacy policy</h1>
-<p>Last updated 13 October 2026.</p>
+<p>Last updated October 19, 2026.</p>
 <p>Skymaps is a weather, maps, flights and stargazing app. This policy is written from the app's code, and the list of
 services below is every hostname the app contacts.</p>
 <h2>The short version</h2>
@@ -98,7 +98,11 @@ are kept until you delete them or the game is retired.</p>
 <p><strong>Forget What Atlas Learned</strong> (Settings, Experimental) deletes everything tied to your install: answers, taught
 places, game counts and daily counters; the app retries until the server confirms. Just before, your latest answers and taught places are added to plain
 counts that hold no key, install number or date, so Atlas keeps what it learned without anything pointing back to
-you. Each count has a ceiling, and installs left out for spam add nothing.</p>
+you. Each count has a ceiling, and installs left out for spam add nothing. So that one install counts once however
+often it deletes and plays again, the server keeps a scrambled marker for each answer or taught place it added. A
+marker holds no key, install number, place, position or date, and can only be matched by the server when the same
+install sends the same answer again; a marker also records an install left out for spam, so deleting does not
+undo that.</p>
 <p><strong>Not stored:</strong> your location, and your IP address beyond ordinary connection handling. Traffic passes through
 Cloudflare, which handles addresses under its own policy.</p>
 <p><strong>Backups.</strong> The database is copied nightly to private storage only the developer can reach, and each copy is
