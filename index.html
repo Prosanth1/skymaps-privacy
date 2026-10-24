@@ -19,19 +19,21 @@
 </head>
 <body>
 <h1>Skymaps privacy policy</h1>
-<p>Last updated October 19, 2026.</p>
-<p>Skymaps is a weather, maps, flights and stargazing app. This policy is written from the app's code, and the list of
+<p>Last updated October 24, 2026.</p>
+<p>Skymaps is a weather and stargazing app. This policy is written from the app's code, and the list of
 services below is every hostname the app contacts.</p>
 <h2>The short version</h2>
 <p>Skymaps has no account, no advertising and no tracking, and it does not watch how you use the app. Nothing you do
-in the app is recorded anywhere, with two exceptions you choose: the features you pick on the What's Next screen, and, if you agree to share them,
-the Think of a Place games Atlas gets wrong. Both are kept against a random access key for your install, never your
-name, email or an account, and you can delete both from the app.</p>
+in the app is recorded anywhere, with one exception you choose: if you agree to share them, the Think of a Place
+games Atlas gets wrong. They are kept against a random access key for your install, never your name, email or an
+account, and you can delete them from the app.</p>
 <h2>What stays on your device</h2>
-<p>Your pinned places, home and work addresses, saved destinations, settings, followed flights, observing log, and what
-Think of a Place has learned from your games and the places you taught it. They live in the app's storage, are not
-sent to any server of ours, and are removed when you delete the app. iCloud device backups include them under
-Apple's terms.</p>
+<p>Your pinned places, settings, observing log, and what Think of a Place has learned from your games and the places
+you taught it. They live in the app's storage, are not sent to any server of ours, and are removed when you delete
+the app. iCloud device backups include them under Apple's terms. The access key for the Skymaps server (described
+below) is kept in the phone's keychain, on this device only, and is not included in backups.</p>
+<p>Earlier versions also kept Home, Work and saved driving destinations. The app no longer has maps or driving, and
+it deletes them from the phone the first time this version opens.</p>
 <p>The Why screen can shorten the National Weather Service's forecast discussion using Apple's on-device model. That
 happens on the phone, with text the app already downloaded, and nothing is sent anywhere.</p>
 <h2>What leaves your device</h2>
@@ -39,12 +41,11 @@ happens on the phone, with text the app already downloaded, and nothing is sent 
 <li><strong>Your location, if you allow it</strong>, as a coordinate sent with weather and map requests. It is not stored with
 anything that identifies you. You can decline and search for places instead.</li>
 <li><strong>Places you search for</strong>, sent to Apple Maps.</li>
-<li><strong>Flight numbers, callsigns or tail numbers</strong> you look up or follow, sent to the flight services listed below.</li>
-<li><strong>Your What's Next picks, when you tap Submit.</strong> Pick as many improvements as you like. They are sent with your
-install's access key and a random install number the app makes for this. The developer sees how many picks each
-feature has; the app shows everyone only each feature's rounded share of the picks, never who picked what. No text,
-name or email is sent. Changing your picks replaces them; Remove My Choices deletes them
-from the server at once. If the server can't be reached, they wait on your phone until it can.</li>
+<li><strong>What's Next picks, from earlier versions only.</strong> Versions before 2026.43.4 had a What's Next screen for voting
+on ideas, which sent the features you picked with your install's access key and a random install number. The
+screen is gone and the app sends no picks now; it also deletes the picks and the install number it kept on the
+phone. The server deleted every pick it had received on October 24, 2026, and the last backup holding them
+is deleted by November 7, 2026.</li>
 <li><strong>Think of a Place games Atlas gets wrong, if you agree.</strong> Before the first game would be shared, a one-time sheet
 explains what is shared and asks: Share to Help Atlas or Don't Share. Nothing is sent before you choose, and the
 Help Atlas Learn switch on the "Which Place Was It?" screen turns it off at any time, including for games still
@@ -54,38 +55,38 @@ access key and a random install number for the game. Your location, anything you
 numbers in it (such as a street address) are never sent. Unsent games wait on the phone for up to 30 days. Once a
 day at most, the app downloads everyone's combined totals, which carry nothing about you.</li>
 </ul>
-<p>No other identifier for you, your device or your install is sent anywhere. Only requests to the Skymaps flights
+<p>No other identifier for you, your device or your install is sent anywhere. Only requests to the Skymaps
 server carry the install's access key.</p>
 <h2>The services Skymaps contacts</h2>
 <ul>
 <li><strong>Weather and forecasts:</strong> <code>api.weather.gov</code>, Apple WeatherKit, <code>open-meteo.com</code> (including its air quality,
-archive and ensemble endpoints), <code>www.spc.noaa.gov</code>, <code>mesonet.agron.iastate.edu</code>, <code>api.rainviewer.com</code>,
-<code>services.swpc.noaa.gov</code>, <code>aviationweather.gov</code>.</li>
-<li><strong>Tides and surf:</strong> <code>api.tidesandcurrents.noaa.gov</code> and <code>www.ndbc.noaa.gov</code>. Their station lists are downloaded whole and the nearest station is found on the phone, so only a station number is sent. The wave forecast comes from <code>api.weather.gov</code> for a point a few kilometers offshore of the place shown.</li>
-<li><strong>Hazards:</strong> <code>earthquake.usgs.gov</code>, <code>volcanoes.usgs.gov</code>, <code>services3.arcgis.com</code> (wildfire), <code>nasstatus.faa.gov</code>.</li>
-<li><strong>Flights:</strong> <code>opendata.adsb.fi</code>, <code>api.adsb.lol</code>, <code>api.adsbdb.com</code>, <code>opensky-network.org</code>, and
-<code>flights.protes.fyi</code>, this app's own server.</li>
+archive and ensemble endpoints), <code>www.spc.noaa.gov</code>, <code>services.swpc.noaa.gov</code>.</li>
+<li><strong>Tides and surf:</strong> <code>api.tidesandcurrents.noaa.gov</code> and <code>www.ndbc.noaa.gov</code>. Their station lists are
+downloaded whole and the nearest station is found on the phone, so only a station number is sent. The wave
+forecast comes from <code>api.weather.gov</code> for a point a few kilometers offshore of the place shown.</li>
+<li><strong>Hazards:</strong> <code>earthquake.usgs.gov</code>, <code>volcanoes.usgs.gov</code>, <code>services3.arcgis.com</code> (wildfire).</li>
+<li><strong>Think of a Place:</strong> <code>flights.protes.fyi</code>, this app's own server, described below.</li>
 <li><strong>Sky:</strong> <code>celestrak.org</code>.</li>
-<li><strong>Maps:</strong> Apple Maps, and <code>overpass-api.de</code> (OpenStreetMap) for the speed limits, stop signs and speed cameras along a drive, which receives the area around the route. Ride buttons open <code>m.uber.com</code> or <code>ride.lyft.com</code> in your browser, under their policies.</li>
+<li><strong>Places:</strong> Apple Maps, for place search, the name of the place at a coordinate, parks and beaches near the place
+shown, and the maps in Think of a Place. Directions to a spot open in the Apple Maps or Waze app, which receive
+only the destination, under their own policies; Skymaps has no navigation of its own.</li>
 </ul>
-<p>Each receives only what its request needs: almost always a coordinate or something you typed.</p>
-<h2>The Skymaps flights server</h2>
-<p><code>flights.protes.fyi</code> is a small server run by the developer. It exists because the flight schedule provider charges
-per request, so the server makes those requests and enforces a monthly limit.</p>
+<p>Each receives only what its request needs: almost always a coordinate or something you typed. A link to a source's
+own page, such as a weather alert or a volcano observatory, opens in your browser.</p>
+<h2>The Skymaps server</h2>
+<p><code>flights.protes.fyi</code> is a small server run by the developer. Its name is historical: it was built to look up flight
+schedules, and the app no longer has any flight features. Today it holds Think of a Place's shared answers.</p>
 <p><strong>Access keys.</strong> To use the server, the app first proves with Apple's App Attest that it is a genuine copy of
 Skymaps. The server then issues the install a random access key, not derived from you, your phone or any Apple
 identifier. App Attest tells the server only that the app is genuine. A device that can't use App Attest doesn't use
 the server, and the app says so.</p>
 <p><strong>What it stores:</strong></p>
 <ul>
-<li>For each install: the public half of its App Attest key, Apple's attestation receipt, and a fingerprint of its
-access key.</li>
-<li>Flight answers, filed under the flight number only (not your key), for about an hour.</li>
-<li>Look-ups per key per day, kept for seven days, and requests to the schedule provider per month.</li>
-<li>Your What's Next picks, against your key.</li>
-<li>Which key each random install number belongs to, so earlier picks or games count once. This is deleted with them.</li>
+<li>For each install: the public half of its App Attest key, Apple's attestation receipt, a fingerprint of its
+access key, and when the install registered and was last issued a key.</li>
+<li>How many times a day each install asked for an access key and downloaded Atlas's totals, kept seven days.</li>
+<li>Which key each random install number belongs to, so games count once. This is deleted with them.</li>
 </ul>
-<p>It keeps no list of the flights you follow; your phone follows them.</p>
 <p><strong>Think of a Place.</strong> Games are not kept as games. For each place and question, the server keeps your install's
 latest answer (one voice per install, for the 150 places it played most recently), plus places you taught (name,
 country and position rounded to about 11 km, up to 30). Beside them: games won and lost, when your install first and
@@ -95,22 +96,24 @@ totals only: how many installs gave each answer, once at least three have, and t
 installs taught the same one within about 25 km. No key, install number or individual answer is ever shared. The
 developer sees the same totals, which installs were left out, and can keep a taught name out of them. Your answers
 are kept until you delete them or the game is retired.</p>
-<p><strong>Forget What Atlas Learned</strong> (Settings, Experimental) deletes everything tied to your install: answers, taught
-places, game counts and daily counters; the app retries until the server confirms. Just before, your latest answers and taught places are added to plain
-counts that hold no key, install number or date, so Atlas keeps what it learned without anything pointing back to
-you. Each count has a ceiling, and installs left out for spam add nothing. So that one install counts once however
-often it deletes and plays again, the server keeps a scrambled marker for each answer or taught place it added. A
-marker holds no key, install number, place, position or date, and can only be matched by the server when the same
-install sends the same answer again; a marker also records an install left out for spam, so deleting does not
-undo that.</p>
+<p><strong>Forget What Atlas Learned</strong> (Settings, Tabs) deletes everything tied to your install's games: answers, taught
+places, game counts, games sent per day, and which key its install number belongs to; the app retries until the
+server confirms. Just before, your latest answers and taught places are added to plain counts that hold no key,
+install number or date, so Atlas keeps what it learned without anything pointing back to you. Each count has a
+ceiling, and installs left out for spam add nothing. So that one install counts once however often it deletes and
+plays again, the server keeps a scrambled marker for each answer or taught place it added. A marker holds no key,
+install number, place, position or date, and can only be matched by the server when the same install sends the same
+answer again; a marker also records an install left out for spam, so deleting does not undo that. Forget does not
+delete the install's App Attest key and access key fingerprint, which the app needs to keep using the server; the
+daily counts of key requests and downloads go after seven days as usual.</p>
 <p><strong>Not stored:</strong> your location, and your IP address beyond ordinary connection handling. Traffic passes through
 Cloudflare, which handles addresses under its own policy.</p>
 <p><strong>Backups.</strong> The database is copied nightly to private storage only the developer can reach, and each copy is
 deleted after 14 days. Anything you delete is gone from every copy within 14 days.</p>
 <p>Nothing the server holds is shared with or sold to anyone.</p>
 <h2>Notifications</h2>
-<p>Weather alerts, flight changes, sky events and the morning digest are scheduled on your phone. The server sends no
-notifications and holds no push token.</p>
+<p>Weather alerts, sky events, the morning digest and the rain countdown on the Lock Screen are made on your phone.
+The server sends no notifications and holds no push token.</p>
 <h2>Children</h2>
 <p>Skymaps is not directed at children and collects nothing that could identify anyone.</p>
 <h2>Changes</h2>
