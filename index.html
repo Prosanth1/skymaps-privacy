@@ -19,14 +19,15 @@
 </head>
 <body>
 <h1>Skymaps privacy policy</h1>
-<p>Last updated October 26, 2026.</p>
+<p>Last updated October 31, 2026.</p>
 <p>Skymaps is a weather and stargazing app. This policy is written from the app's code, and the list of
 services below is every hostname the app contacts.</p>
 <h2>The short version</h2>
 <p>Skymaps has no account, no advertising and no tracking, and it does not watch how you use the app. Nothing you do
-in the app is recorded anywhere, with one exception you choose: if you agree to share them, the Think of a Place
-games Atlas gets wrong. They are kept against a random access key for your install, never your name, email or an
-account, and you can delete them from the app.</p>
+in the app is recorded anywhere, with one exception you choose: if you agree to share them, your Think of a Place
+games, the ones Atlas guesses and the ones it gets wrong. They are kept against a random access key for your install,
+never your name, email or an account, and you can delete them from the app. Game Center is also your choice, and off
+until you turn it on.</p>
 <h2>What stays on your device</h2>
 <p>Your pinned places, settings, observing log, and what Think of a Place has learned from your games and the places
 you taught it. They live in the app's storage, are not sent to any server of ours, and are removed when you delete
@@ -47,10 +48,12 @@ weather services as any other place.</li>
 on ideas, which sent the features you picked with your install's access key and a random install number. The
 screen is gone and the app sends no picks now. Updating to 2026.43.4 deleted the picks and the install number
 kept on the phone, and the server deleted every pick it had received on October 24, 2026.</li>
-<li><strong>Think of a Place games Atlas gets wrong, if you agree.</strong> Before the first game would be shared, a one-time sheet
+<li><strong>Think of a Place games, won or lost, if you agree.</strong> Before the first game would be shared, a one-time sheet
 explains what is shared and asks: Share to Help Atlas or Don't Share. Nothing is sent before you choose, and the
-Help Atlas Learn switch on the "Which Place Was It?" screen turns it off at any time, including for games still
-waiting. A shared game holds the place (or, for a place Atlas didn't know, its name from Apple Maps, its country and
+Help Atlas Learn switch, on the game's start screen and on the "Which Place Was It?" screen, turns it off at any
+time, including for games still waiting. Earlier versions shared only the games Atlas got wrong; if you
+agreed then, the sheet asks once more, on the first game Atlas guesses, before any of those is shared. A shared
+game holds the place (or, for a place that isn't in Atlas's list, its name from Apple Maps, its country and
 its position rounded to about 11 km), your answers, whether Atlas won, and how many guesses it used, with your
 access key and a random install number used only by Think of a Place. Your location, anything you type, and any place name with
 numbers in it (such as a street address) are never sent. Unsent games wait on the phone for up to 30 days. Once a
@@ -67,16 +70,22 @@ downloaded whole and the nearest station is found on the phone, so only a statio
 forecast comes from <code>api.weather.gov</code> for a point a few kilometers offshore of the place shown.</li>
 <li><strong>Hazards:</strong> <code>earthquake.usgs.gov</code>, <code>volcanoes.usgs.gov</code>, <code>services3.arcgis.com</code> (wildfire).</li>
 <li><strong>Radar:</strong> <code>opengeo.ncep.noaa.gov</code> (radar images), <code>mapservices.weather.noaa.gov</code> (warnings, forecast
-amounts, fronts, station winds), <code>nowcoast.noaa.gov</code> (satellite, lightning, tropical storms),
-<code>satepsanone.nesdis.noaa.gov</code> (smoke) and <code>mesonet.agron.iastate.edu</code> (the 12-hour forecast), asked for the
-area of the map shown.</li>
+amounts, fronts, station winds, the temperature map), <code>nowcoast.noaa.gov</code> (satellite, lightning, tropical storms),
+<code>satepsanone.nesdis.noaa.gov</code> (smoke), <code>services.arcgis.com</code> (the EPA's AirNow air quality map, the same for
+everyone), <code>services3.arcgis.com</code> (wildfires in view) and <code>mesonet.agron.iastate.edu</code> (the 12-hour forecast),
+asked for the area of the map shown.</li>
 <li><strong>Dark sky:</strong> <code>gibs.earthdata.nasa.gov</code>, NASA's night-lights map tiles for the area around the place shown. Drive
 times to darker skies come from Apple Maps.</li>
 <li><strong>Ski areas:</strong> <code>overpass-api.de</code> (OpenStreetMap), sent a rounded coordinate.</li>
 <li><strong>Think of a Place:</strong> <code>flights.protes.fyi</code>, this app's own server, described below.</li>
+<li><strong>Game Center, only if you turn it on</strong> (Awards, in Think of a Place): Apple's Game Center receives the awards you
+have earned and three totals, games won, best win streak and places taught, under your Game Center account and
+Apple's terms. Who can see them follows your Game Center settings. No place, answer or location goes to Game
+Center, and nothing from Game Center reaches the Skymaps server. Stop Using Game Center, on the same screen,
+stops it.</li>
 <li><strong>Sky:</strong> <code>celestrak.org</code>.</li>
-<li><strong>Places:</strong> Apple Maps, for place search, the name of the place at a coordinate, parks and beaches near the place
-shown, and the maps in Think of a Place. When the app isn't in English, Think of a Place also asks Apple Maps for
+<li><strong>Places:</strong> Apple Maps, for place search, the name of the place at a coordinate, parks, beaches and other places to go
+near the place shown, and the maps in Think of a Place. When the app isn't in English, Think of a Place also asks Apple Maps for
 the name of a city Atlas is about to guess, to show it in your language. Directions to a spot open in the Apple Maps or Waze app, which receive
 only the destination, under their own policies; Skymaps has no navigation of its own.</li>
 </ul>
@@ -96,8 +105,9 @@ access key, and when the install registered and was last issued a key.</li>
 <li>How many times a day each install asked for an access key and downloaded Atlas's totals, kept seven days.</li>
 </ul>
 <p><strong>Think of a Place.</strong> Games are not kept as games. For each place and question, the server keeps your install's
-latest answer (one voice per install, for the 150 places it played most recently), plus places you taught (name,
-country and position rounded to about 11 km, up to 30). Beside them: games won and lost, when your install first and
+latest answer (one voice per install, for the 150 places it played most recently), plus the places your games named
+that aren't in Atlas's built-in list, ones you taught or that Atlas guessed (name, country and position rounded to
+about 11 km, up to 30). Beside them: games won and lost, the install number its first game came with, when your install first and
 last sent a game, when each answer was last given, games sent per day (kept seven days), and whether the install was
 left out for sending far more than a person plays or the same answer every time. What it shares with players is
 totals only: how many installs gave each answer, once at least three have, and taught places once at least three
@@ -106,7 +116,7 @@ played each place and each country (once at least three have), and how consisten
 developer sees the same totals, which installs were left out, and can keep a taught name out of them. Your answers
 are kept until you delete them or the game is retired.</p>
 <p><strong>Forget What Atlas Learned</strong> (Settings, Tabs) deletes everything tied to your install's games, including any sent
-under its install number before it had an access key: answers, taught places, game counts and games sent per day.
+under its install number before it had an access key, or, for games sent since November 2026, with the same install number under an earlier access key the app replaced: answers, taught places, game counts and games sent per day.
 The app retries until the server confirms. After the app is deleted and installed again on the same iPhone, Forget
 still reaches the games sent with the install's access key, which stays in the phone's keychain. It may not reach games
 sent from earlier versions under the install number alone, before the install had an access key, because that number
