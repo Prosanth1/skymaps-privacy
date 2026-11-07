@@ -19,7 +19,7 @@
 </head>
 <body>
 <h1>Skymaps privacy policy</h1>
-<p>Last updated October 31, 2026.</p>
+<p>Last updated November 6, 2026.</p>
 <p>Skymaps is a weather and stargazing app. This policy is written from the app's code, and the list of
 services below is every hostname the app contacts.</p>
 <h2>The short version</h2>
@@ -27,7 +27,8 @@ services below is every hostname the app contacts.</p>
 in the app is recorded anywhere, with one exception you choose: if you agree to share them, your Think of a Place
 games, the ones Atlas guesses and the ones it gets wrong. They are kept against a random access key for your install,
 never your name, email or an account, and you can delete them from the app. Game Center is also your choice, and off
-until you turn it on.</p>
+until you turn it on. Steps from Apple Health, if you turn them on for your trips, are read on the device and never
+leave it.</p>
 <h2>What stays on your device</h2>
 <p>Your pinned places, settings, observing log, and what Think of a Place has learned from your games and the places
 you taught it. They live in the app's storage, are not sent to any server of ours, and are removed when you delete
@@ -35,6 +36,15 @@ the app. iCloud device backups include them under Apple's terms. The access key 
 below) is kept in the phone's keychain, on this device only, and is not included in backups.</p>
 <p>Versions before 2026.43.4 also kept Home, Work and saved driving destinations on the phone. Updating to 2026.43.4
 deleted them, and the app no longer has maps or driving.</p>
+<p><strong>Steps from Apple Health.</strong> If you tap Show Steps on a trip or on the Trip Passport, Skymaps asks Apple Health for
+permission to read two things: your step count and your walking and running distance. Nothing is asked before that
+tap. Skymaps reads them only for your trips' days, adds them up on the device and shows them on those screens. It
+never writes anything to Health, keeps the totals only in memory while the app is open, and never sends your steps
+to any server, ours or anyone else's. They are not used for advertising, sold, or shared. You can turn the access off
+at any time in Settings, Privacy &amp; Security, Health, Skymaps.</p>
+<p><strong>Sample trips.</strong> Until you add a trip of your own, the Trips tab and the Trip Passport show a few made-up sample
+trips, clearly labeled, with made-up weather and steps that are built into the app. Showing them contacts no service
+and reads nothing from Health.</p>
 <p>The Why screen can shorten the National Weather Service's forecast discussion using Apple's on-device model. That
 happens on the phone, with text the app already downloaded, and nothing is sent anywhere.</p>
 <h2>What leaves your device</h2>
@@ -65,6 +75,9 @@ server carry the install's access key.</p>
 <ul>
 <li><strong>Weather and forecasts:</strong> <code>api.weather.gov</code>, Apple WeatherKit, <code>open-meteo.com</code> (including its air quality,
 archive and ensemble endpoints), <code>www.spc.noaa.gov</code>, <code>services.swpc.noaa.gov</code>.</li>
+<li><strong>Trip Passport:</strong> <code>historical-forecast-api.open-meteo.com</code>, and <code>archive-api.open-meteo.com</code> for trips before
+2022 or days it lacks, for the weather each past trip's days actually had, asked for by the trip destination's
+position and dates. The Passport itself is worked out on the phone.</li>
 <li><strong>Tides and surf:</strong> <code>api.tidesandcurrents.noaa.gov</code> and <code>www.ndbc.noaa.gov</code>. Their station lists are
 downloaded whole and the nearest station is found on the phone, so only a station number is sent. The wave
 forecast comes from <code>api.weather.gov</code> for a point a few kilometers offshore of the place shown.</li>
@@ -73,10 +86,19 @@ forecast comes from <code>api.weather.gov</code> for a point a few kilometers of
 amounts, fronts, station winds, the temperature map), <code>nowcoast.noaa.gov</code> (satellite, lightning, tropical storms),
 <code>satepsanone.nesdis.noaa.gov</code> (smoke), <code>services.arcgis.com</code> (the EPA's AirNow air quality map, the same for
 everyone), <code>services3.arcgis.com</code> (wildfires in view) and <code>mesonet.agron.iastate.edu</code> (the 12-hour forecast),
-asked for the area of the map shown.</li>
+asked for the area of the map shown. <code>digital.weather.gov</code> (the Weather Service's sky cover forecast, for the
+Clear Tonight layer) is asked for the area of the map shown, and, for a spot you tap, for a box about 3 km
+(2 miles) across around it.</li>
 <li><strong>Dark sky:</strong> <code>gibs.earthdata.nasa.gov</code>, NASA's night-lights map tiles for the area around the place shown. Drive
 times to darker skies come from Apple Maps.</li>
-<li><strong>Ski areas:</strong> <code>overpass-api.de</code> (OpenStreetMap), sent a rounded coordinate.</li>
+<li><strong>Skiing:</strong> the list of ski areas is built into the app, so finding the ones near a place sends nothing. For a
+resort near the place shown, in ski season, for a resort picked on the Skiing screen (which lists those within
+about 100 miles), and for a trip's destination resort in any month: <code>api.open-meteo.com</code> for its forecast at its
+base and summit, asked for by the resort's own position; <code>overpass-api.de</code> (OpenStreetMap) for its trail map,
+asked for by the resort's area; in the US, <code>wcc.sc.egov.usda.gov</code> (the USDA's SNOTEL snow stations), whose station
+list is downloaded whole and searched on the phone, so only a station number is sent; and <code>api.avalanche.org</code> for
+the avalanche danger map, downloaded whole for everyone. Only resort coordinates are sent, never yours, though
+asking about a resort says the place shown, or a trip's destination, is within about 100 miles of it.</li>
 <li><strong>Think of a Place:</strong> <code>flights.protes.fyi</code>, this app's own server, described below.</li>
 <li><strong>Game Center, only if you turn it on</strong> (Awards, in Think of a Place): Apple's Game Center receives the awards you
 have earned and three totals, games won, best win streak and places taught, under your Game Center account and
