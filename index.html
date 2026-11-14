@@ -19,7 +19,7 @@
 </head>
 <body>
 <h1>Skymaps privacy policy</h1>
-<p>Last updated November 9, 2026.</p>
+<p>Last updated November 13, 2026.</p>
 <p>Skymaps is a weather and stargazing app. The list of services below is every hostname the app contacts.</p>
 <h2>The short version</h2>
 <p>Skymaps has no account, no advertising and no tracking, and it does not watch how you use the app. Nothing you do
@@ -44,6 +44,18 @@ at any time in Settings, Privacy &amp; Security, Health, Skymaps.</p>
 <p><strong>Sample trips.</strong> Until you remove them, the Trips tab and the Trip Passport show a few made-up sample trips beside
 your own, clearly labeled, with made-up weather and steps that are built into the app. Showing them contacts no service
 and reads nothing from Health, and a shared passport picture leaves them out.</p>
+<p><strong>Sky Journal.</strong> While Remember Each Day is on (Settings, General, Sky Journal), Skymaps notes which place your
+iPhone was in each day, so the journal can show your own year of weather and sky, trips included. It uses only the
+locations the app already gets: the Weather tab loading your location, and, if you turned on Keep Location Current
+While Traveling, the moves iOS already reports for it. It asks for no new permission and does no extra tracking. Each
+place is kept rounded to about 1 km (0.7 mile), with its name, the days you were there and the names of weather alerts
+in force there. It is kept only on this device, in a folder of its own, and is never sent to any server, ours or
+anyone else's. Clear Sky Journal History deletes it, and turning the switch off stops it. To fill in each day's
+weather, the app asks Open-Meteo for those dates at a point on its weather grid, about 28 km (17 miles) across,
+the same way it asks for any place's weather; the journal itself is worked out on the phone.</p>
+<p><strong>Recent place searches.</strong> The place search remembers the last five places you picked that aren't saved, so you
+can pick them again. They are kept only on this device and are never sent anywhere. Clear in the Recent heading, or
+swiping one away, removes them. Searching itself goes to Apple Maps, as it always has.</p>
 <p>The Why screen can shorten the National Weather Service's forecast discussion using Apple's on-device model. That
 happens on the phone, with text the app already downloaded, and nothing is sent anywhere.</p>
 <h2>What leaves your device</h2>
@@ -74,6 +86,9 @@ server carry the install's access key.</p>
 <ul>
 <li><strong>Weather and forecasts:</strong> <code>api.weather.gov</code>, Apple WeatherKit, <code>open-meteo.com</code> (including its air quality,
 archive and ensemble endpoints), <code>www.spc.noaa.gov</code>, <code>services.swpc.noaa.gov</code>.</li>
+<li><strong>Sky Journal:</strong> <code>archive-api.open-meteo.com</code> and <code>api.open-meteo.com</code> for the weather of the days in it, asked
+for by a grid point about 28 km (17 miles) across and the dates, and <code>services.swpc.noaa.gov</code> for the planetary
+Kp, the same for everyone.</li>
 <li><strong>Trip Passport:</strong> <code>historical-forecast-api.open-meteo.com</code>, and <code>archive-api.open-meteo.com</code> for trips before
 2022 or days it lacks, for the weather each past trip's days actually had, asked for by the trip destination's
 position and dates. The Passport itself is worked out on the phone.</li>
@@ -82,12 +97,14 @@ downloaded whole and the nearest station is found on the phone, so only a statio
 forecast comes from <code>api.weather.gov</code> for a point a few kilometers offshore of the place shown.</li>
 <li><strong>Hazards:</strong> <code>earthquake.usgs.gov</code>, <code>volcanoes.usgs.gov</code>, <code>services3.arcgis.com</code> (wildfire).</li>
 <li><strong>Radar:</strong> <code>opengeo.ncep.noaa.gov</code> (radar images), <code>mapservices.weather.noaa.gov</code> (warnings, forecast
-amounts, fronts, station winds, the temperature map), <code>nowcoast.noaa.gov</code> (satellite, lightning, tropical storms),
+amounts, fronts, station winds, the temperature map, tropical storm cones and winds), <code>nowcoast.noaa.gov</code> (satellite, lightning), <code>geo.weather.gc.ca</code> (lightning in Canada, asked for the area of the map shown), <code>www.nhc.noaa.gov</code> and <code>www.gdacs.org</code> (the tropical storms, each list the same for everyone),
 <code>satepsanone.nesdis.noaa.gov</code> (smoke), <code>services.arcgis.com</code> (the EPA's AirNow air quality map, the same for
-everyone), <code>services3.arcgis.com</code> (wildfires in view) and <code>mesonet.agron.iastate.edu</code> (the 12-hour forecast),
+everyone), <code>services3.arcgis.com</code> (wildfires in view) and <code>mesonet.agron.iastate.edu</code> (the 12-hour forecast; the storm cells, one file for everyone),
 asked for the area of the map shown. <code>digital.weather.gov</code> (the Weather Service's sky cover forecast, for the
 Clear Tonight layer) is asked for the area of the map shown, and, for a spot you tap, for a box about 3 km
-(2 miles) across around it.</li>
+(2 miles) across around it. The soil temperature layer asks <code>gibs.earthdata.nasa.gov</code> (NASA's soil temperature
+map) for the area of the map shown, and, for a spot you tap, for a box about 6 km (4 miles) across around it,
+and <code>api.open-meteo.com</code> for the soil temperature now at that spot, rounded to about 11 km (7 miles).</li>
 <li><strong>Dark sky:</strong> <code>gibs.earthdata.nasa.gov</code>, NASA's night-lights map tiles for the area around the place shown. Drive
 times to darker skies come from Apple Maps.</li>
 <li><strong>Skiing:</strong> the list of ski areas is built into the app, so finding the ones near a place sends nothing. For a
